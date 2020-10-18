@@ -5,5 +5,5 @@ from .http.home import Home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Home.as_view(), name='home'),
+    path('api/home', Home.as_view(), name='home'),
 ]

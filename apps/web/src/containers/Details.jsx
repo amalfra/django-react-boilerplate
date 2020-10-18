@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import DetailsPage from '../pages/Details';
+import { ApiGet } from '../store/actions';
 
-function Details() {
-  return (
-    <DetailsPage />
-  );
+class Details extends Component {
+  componentDidMount() {
+    const { apiGet } = this.props;
+
+    apiGet('home');
+  }
+
+  render() {
+    return (
+      <DetailsPage />
+    );
+  }
 }
 
-export default Details;
+const mapStateToProps = state => ({
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+  apiGet: ApiGet,
+}, dispatch)
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Details);

@@ -2,10 +2,14 @@ import os
 
 from .base import *
 
-ALLOWED_HOSTS += ['127.0.0.1']
+ALLOWED_HOSTS += ['localhost']
 DEBUG = True
 
 WSGI_APPLICATION = 'src.wsgi.dev.application'
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
 
 DATABASES = {
     'default': {
