@@ -1,6 +1,5 @@
-export const API_GET = 'API_GET';
-export const API_POST = 'API_POST';
-export const API_PUT = 'API_PUT';
-export const API_DELETE = 'API_DELETE';
+export const API_CALL_PENDING = 'API_CALL_PENDING';
+export const API_CALL_SUCCESS = 'API_CALL_SUCCESS';
+export const API_CALL_FAILURE = 'API_CALL_FAILURE';
 
-export { ApiGet } from './apiCall';
+export { ApiCall } from './apiCall';

@@ -3,13 +3,15 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import DetailsPage from '../pages/Details';
-import { ApiGet } from '../store/actions';
+import { ApiCall } from '../store/actions';
+
+const apiPath = 'home';
 
 class Details extends Component {
   componentDidMount() {
-    const { apiGet } = this.props;
+    const { apiCall } = this.props;
 
-    apiGet('home');
+    apiCall(apiPath);
   }
 
   render() {
@@ -23,7 +25,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  apiGet: ApiGet,
+  apiCall: ApiCall,
 }, dispatch)
 
 export default connect(
