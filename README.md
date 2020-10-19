@@ -1,6 +1,26 @@
 Django React Boilerplate
 ========
 
+This repository contains a boilerplate project setup for Django and React. There is a backend api built with the Django Framework and frontend React Redux setup using react-scripts scaffolding.
+
+#### Using backend app
+
+To use the backend app, got to ```apps/api``` folder and run below commands:
+
+```sh
+pip install -r requirements.txt
+python manage.py runserver
+```
+
+#### Using frontend app
+
+To use the frontend app, got to ```apps/web``` folder and run below commands:
+
+```sh
+npm i
+npm start
+```
+
 ## Development
 Questions, problems or suggestions? Please post them on the [issue tracker](https://github.com/amalfra/django-react-boilerplate/issues).
 
