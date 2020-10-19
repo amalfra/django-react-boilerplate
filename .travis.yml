@@ -1,0 +1,22 @@
+os:
+  - linux
+
+dist: trusty
+
+language: node_js
+
+node_js:
+  - '10.12.0'
+
+branches:
+  only:
+    - main
+
+script:
+  - cd apps/web
+  - npm i
+  - npm test
+
+cache:
+  directories:
+    - node_modules
