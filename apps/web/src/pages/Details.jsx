@@ -1,11 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Details() {
+function Details({ status }) {
   return (
     <section>
-      this is details page
+      Got status from api: {status}
     </section>
   );
 }
+
+Details.propTypes = {
+  status: PropTypes.string.isRequired,
+};
 
 export default Details;
